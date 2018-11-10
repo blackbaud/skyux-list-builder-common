@@ -1,0 +1,16 @@
+{
+  "name": "skyux-list-builder-state",
+  "mode": "easy",
+  "compileMode": "aot",
+  "skyuxModules": [
+    "SkyErrorModule"
+  ],
+  "plugins": [
+    "@skyux-sdk/builder-plugin-skyux"
+  ],
+  "testSettings": {
+    "unit": {
+      "browserSet": "paranoid"
+    }
+  }
+}
