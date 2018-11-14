@@ -1,6 +1,6 @@
 {
   "name": "@skyux/list-builder-state",
-  "version": "3.0.0-alpha.x",
+  "version": "3.0.0-alpha.0",
   "description": "SKY UX List Builder State",
   "main": "bundles/bundle.umd.js",
   "module": "index.ts",
@@ -27,7 +27,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@blackbaud/skyux": "2.28.3",
+    "@blackbaud/skyux": "2.30.0",
     "@blackbaud/skyux-builder": "1.29.0",
     "@skyux-sdk/builder-plugin-skyux": "1.0.0-rc.5"
   }
