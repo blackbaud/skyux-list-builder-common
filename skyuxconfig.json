@@ -1,5 +1,5 @@
 {
-  "name": "skyux-list-builder-state",
+  "name": "skyux-list-builder-common",
   "mode": "easy",
   "compileMode": "aot",
   "skyuxModules": [
