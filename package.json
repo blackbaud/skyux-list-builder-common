@@ -1,7 +1,7 @@
 {
-  "name": "@skyux/list-builder-state",
-  "version": "3.0.0-alpha.x",
-  "description": "SKY UX List Builder State",
+  "name": "@skyux/list-builder-common",
+  "version": "3.0.0-alpha.0",
+  "description": "SKY UX List Builder Common",
   "main": "bundles/bundle.umd.js",
   "module": "index.ts",
   "scripts": {
@@ -16,18 +16,18 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/blackbaud/skyux-list-builder-state.git"
+    "url": "git+https://github.com/blackbaud/skyux-list-builder-common.git"
   },
   "bugs": {
-    "url": "https://github.com/blackbaud/skyux-list-builder-state/issues"
+    "url": "https://github.com/blackbaud/skyux-list-builder-common/issues"
   },
-  "homepage": "https://github.com/blackbaud/skyux-list-builder-state#readme",
+  "homepage": "https://github.com/blackbaud/skyux-list-builder-common#readme",
   "peerDependencies": {
     "@angular/core": "^4.3.6"
   },
   "dependencies": {},
   "devDependencies": {
-    "@blackbaud/skyux": "2.28.3",
+    "@blackbaud/skyux": "2.30.0",
     "@blackbaud/skyux-builder": "1.29.0",
     "@skyux-sdk/builder-plugin-skyux": "1.0.0-rc.5"
   }
