@@ -1,3 +1,9 @@
+# 4.0.0-rc.1 (2020-04-16)
+
+### New features
+
+- Migrated all of the types from `microedge-rxstate`. [#12](https://github.com/blackbaud/skyux-list-builder-common/pull/12)
+
 # 4.0.0-rc.0 (2020-04-06)
 
 ### New features
