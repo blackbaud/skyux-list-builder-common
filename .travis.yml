@@ -1,12 +1,13 @@
 language: node_js
 git:
-  depth:
+  depth: 5
 
 branches:
   only:
     - master
     - /^[0-9]+\.[0-9]+\.[0-9]+.*/
     - /^rc-.*$/
+    - 3.x.x
 
 before_install:
   - bash <(curl -s https://blackbaud.github.io/skyux-travis/v3/library-before-install.sh)
