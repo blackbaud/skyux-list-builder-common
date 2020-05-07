@@ -1,6 +1,6 @@
 {
   "name": "@skyux/list-builder-common",
-  "version": "4.0.0-rc.1",
+  "version": "4.0.0",
   "description": "SKY UX List Builder Common",
   "scripts": {
     "build": "skyux build-public-library",
