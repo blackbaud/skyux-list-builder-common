@@ -7,7 +7,7 @@
 
 ### Breaking changes
 
-- Dropped support for `rxjs@5`. Consumers may install `rxjs-compat@^6` to support older versions of `rxjs`. [#11](https://github.com/blackbaud/skyux-list-builder-common/pull/11)
+- Dropped support for `rxjs@5`. Consumers can install `rxjs-compat@^6` to support older versions of `rxjs`. [#11](https://github.com/blackbaud/skyux-list-builder-common/pull/11)
 
 # 4.0.0-rc.1 (2020-04-16)
 
@@ -23,7 +23,7 @@
 
 ### Breaking changes
 
-- Dropped support for `rxjs@5`. Consumers may install `rxjs-compat@^6` to support older versions of `rxjs`. [#11](https://github.com/blackbaud/skyux-list-builder-common/pull/11)
+- Dropped support for `rxjs@5`. Consumers can install `rxjs-compat@^6` to support older versions of `rxjs`. [#11](https://github.com/blackbaud/skyux-list-builder-common/pull/11)
 
 # 3.0.0 (2019-01-11)
 
