@@ -1,0 +1,193 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "list-builder-common": {
+      "projectType": "library",
+      "root": "projects/list-builder-common",
+      "sourceRoot": "projects/list-builder-common/src",
+      "prefix": "sky",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/list-builder-common/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/list-builder-common/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/list-builder-common/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/list-builder-common/src/test.ts",
+            "tsConfig": "projects/list-builder-common/tsconfig.spec.json",
+            "karmaConfig": "projects/list-builder-common/karma.conf.js",
+            "codeCoverage": true,
+            "codeCoverageExclude": [
+              "**/fixtures/**",
+              "projects/list-builder-common/src/test.ts"
+            ],
+            "styles": [
+              "@skyux/theme/css/sky.css",
+              "@skyux/theme/css/themes/modern/styles.css"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/list-builder-common/**/*.ts",
+              "projects/list-builder-common/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "list-builder-common-showcase": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss",
+          "skipTests": true
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/list-builder-common-showcase",
+      "sourceRoot": "projects/list-builder-common-showcase/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/list-builder-common-showcase",
+            "index": "projects/list-builder-common-showcase/src/index.html",
+            "main": "projects/list-builder-common-showcase/src/main.ts",
+            "polyfills": "projects/list-builder-common-showcase/src/polyfills.ts",
+            "tsConfig": "projects/list-builder-common-showcase/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/list-builder-common-showcase/src/favicon.ico",
+              "projects/list-builder-common-showcase/src/assets"
+            ],
+            "styles": [
+              "node_modules/@skyux/theme/css/sky.css",
+              "node_modules/@skyux/theme/css/themes/modern/styles.css",
+              "projects/list-builder-common-showcase/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/list-builder-common-showcase/src/environments/environment.ts",
+                  "with": "projects/list-builder-common-showcase/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "list-builder-common-showcase:build:production"
+            },
+            "development": {
+              "browserTarget": "list-builder-common-showcase:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "list-builder-common-showcase:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/list-builder-common-showcase/src/test.ts",
+            "polyfills": "projects/list-builder-common-showcase/src/polyfills.ts",
+            "tsConfig": "projects/list-builder-common-showcase/tsconfig.spec.json",
+            "karmaConfig": "projects/list-builder-common-showcase/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/list-builder-common-showcase/src/favicon.ico",
+              "projects/list-builder-common-showcase/src/assets"
+            ],
+            "styles": [
+              "projects/list-builder-common-showcase/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/list-builder-common-showcase/**/*.ts",
+              "projects/list-builder-common-showcase/**/*.html"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "list-builder-common",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
+}
