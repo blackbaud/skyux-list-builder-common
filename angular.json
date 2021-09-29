@@ -32,7 +32,8 @@
             "karmaConfig": "projects/list-builder-common/karma.conf.js",
             "codeCoverage": true,
             "codeCoverageExclude": [
-              "**/fixtures/**"
+              "**/fixtures/**",
+              "projects/list-builder-common/src/test.ts"
             ],
             "styles": [
               "@skyux/theme/css/sky.css",
