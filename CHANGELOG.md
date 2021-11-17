@@ -1,4 +1,4 @@
-# 5.0.0 (2021-11-17)
+# 5.0.1 (2021-11-17)
 
 - Added support for prettier code formatting and updated the builder to support StackBlitz. []()
 
